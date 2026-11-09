@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* Profile Photo */}
           <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#aec7f7]/40 bg-[#0b0e13] shadow-md flex items-center justify-center">
             <img 
-              src="/asset/ridzki.jpeg" 
+              src="/assets/ridzki.jpeg" 
               alt="Ridzki Ahnovalrian Arifin" 
               className="w-full h-full object-cover"
             />

@@ -145,7 +145,7 @@ export default function App() {
                   <div className="relative my-auto flex flex-col items-center justify-center text-center py-2">
                     <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-xl overflow-hidden border-2 border-[#aec7f7]/30 shadow-lg bg-[#0b0e13] group-hover:scale-105 transition-transform duration-300">
                       <img 
-                        src="/asset/ridzki.jpeg" 
+                        src="/assets/ridzki.jpeg" 
                         alt="Ridzki Ahnovalrian Arifin" 
                         className="w-full h-full object-cover"
                       />
