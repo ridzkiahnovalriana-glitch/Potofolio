@@ -52,19 +52,19 @@ export default function App() {
       ]
     },
     {
-      title: 'TUBES-UAS-KELOMPOK_1',
-      category: 'ACADEMIC REPOSITORY // C++',
-      description: 'Repositori kolaborasi tugas besar semester berbasis C++ dan kontrol versi Git yang dikerjakan bersama kelompok.',
-      tech: ['C++', 'Git Workflow', 'Collaboration'],
-      link: 'https://github.com/ryvlds/TUBES-UAS-KELOMPOK_1',
-      snippetTitle: 'tubes_uas_main.cpp',
-      snippetLines: [
-        '$ g++ -o main main.cpp structures.cpp',
-        '> Compiling modular components...',
-        '> Team Git Commit Verified: #1 Branch Main',
-        '> Execution completed without errors [EXIT: 0]'
-      ]
-    }
+    title: 'Portal Sistem Pengumpulan Tugas // Sistem Operasi',
+    category: 'ACADEMIC REPOSITORY // Sistem Operasi',
+    description: 'Web portofolio akademik interaktif yang dikembangkan secara mandiri untuk mendokumentasikan tugas besar dan latihan mata kuliah Sistem Operasi. Menyajikan rincian pengerjaan algoritma (Disk & CPU Scheduling) lengkap dengan tabel analisis, alur proses, serta integrasi unduhan dokumen via Google Drive.',
+    tech: ['React.js', 'Tailwind CSS v3'],
+    link: 'https://sistem-pengumpulan-tugas-ridzkiahnoval.vercel.app/',
+    snippetTitle: 'os_portal_config.jsx',
+    snippetLines: [
+      '$ npm run build',
+      '> Bundling React components & Tailwind CSS v3...',
+      '> Student: Ridzki Ahnovalrian Arifin [2503010031]',
+      '> Deployment status: Live on Vercel [EXIT: 0]'
+    ]
+  }
   ];
 
   const certs = [
