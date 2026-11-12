@@ -95,7 +95,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="text-xs font-medium text-[#aec7f7]"
             >
-              Let's Talk ⚡
+              Let's Talk
             </a>
           </div>
         </div>

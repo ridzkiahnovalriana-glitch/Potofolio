@@ -10,12 +10,6 @@ export default function App() {
   const [copied, setCopied] = useState(false);
   const email = 'ridzkiahnovalriana@gmail.com';
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   const educations = [
     { period: '2013 - 2019', school: 'SDN Mangkubumi' },
     { period: '2019 - 2022', school: 'SMPN 14 Tasikmalaya' },
@@ -25,49 +19,57 @@ export default function App() {
   const projects = [
     {
       title: 'Warung Gamantha',
-      category: 'TEAM PROJECT // WEB APP',
-      description: 'Aplikasi web sistem manajemen dan pemesanan kuliner lokal yang dikembangkan secara kolaboratif dengan tim menggunakan React dan Tailwind CSS.',
+      category: 'TEAM PROJECT // UMKM WEB APP',
+      image: '/assets/project/gamantha.png',
+      description: 'Aplikasi web sistem manajemen dan pemesanan kuliner lokal UMKM yang dikembangkan secara kolaboratif dengan tim menggunakan React dan Tailwind CSS.',
       tech: ['React.js', 'Tailwind CSS', 'Team Work'],
-      link: 'https://github.com/ryvlds',
+      link: 'https://warung-gamantha.vercel.app/',
       snippetTitle: 'warung_gamantha_app.jsx',
       snippetLines: [
         '$ npm run dev --host',
-        '> Vite v5.0 building for production...',
-        '> [Warung Gamantha] Module compiled successfully [OK]',
+        '> [Warung Gamantha UMKM] Module compiled [OK]',
         '> Team Collaboration State: Active Sync'
       ]
     },
     {
       title: 'Smart Parking System',
-      category: 'TEAM PROJECT // LOGIC SYS',
-      description: 'Sistem manajemen parkir cerdas berbasis web untuk memantau ketersediaan slot, pencatatan durasi, dan kalkulasi tarif kendaraan secara tim.',
+      category: 'TEAM PROJECT // UAS SYSTEM',
+      image: '/assets/project/SystemSmartParking.png',
+      description: 'Sistem manajemen parkir cerdas berbasis web untuk proyek UAS, dikerjakan secara tim bersama rekan kolaborator.',
       tech: ['JavaScript', 'HTML5/CSS3', 'Team Work'],
-      link: 'https://github.com/ryvlds',
+      link: 'https://github.com/ryvlds/TUBES-UAS-KELOMPOK_1',
       snippetTitle: 'parking_matrix_core.js',
       snippetLines: [
         '$ node server.js',
-        '> Initializing Slot Allocation Matrix...',
-        '> Slot A1-A4: [OCCUPIED] | Slot B1-B4: [FREE]',
-        '> Automated Billing Engine: Online'
+        '> Collaborator: rayival.vercel.app [UAS Project]',
+        '> Slot Allocation & Automated Billing: Online'
       ]
     },
     {
-    title: 'Portal Sistem Pengumpulan Tugas // Sistem Operasi',
-    category: 'ACADEMIC REPOSITORY // Sistem Operasi',
-    description: 'Web portofolio akademik interaktif yang dikembangkan secara mandiri untuk mendokumentasikan tugas besar dan latihan mata kuliah Sistem Operasi. Menyajikan rincian pengerjaan algoritma (Disk & CPU Scheduling) lengkap dengan tabel analisis, alur proses, serta integrasi unduhan dokumen via Google Drive.',
-    tech: ['React.js', 'Tailwind CSS v3'],
-    link: 'https://sistem-pengumpulan-tugas-ridzkiahnoval.vercel.app/',
-    snippetTitle: 'os_portal_config.jsx',
-    snippetLines: [
-      '$ npm run build',
-      '> Bundling React components & Tailwind CSS v3...',
-      '> Student: Ridzki Ahnovalrian Arifin [2503010031]',
-      '> Deployment status: Live on Vercel [EXIT: 0]'
-    ]
-  }
+      title: 'Portal Sistem Pengumpulan Tugas // Sistem Operasi',
+      category: 'ACADEMIC REPOSITORY // Sistem Operasi',
+      image: '/assets/project/sistempengumpulantugas.png',
+      description: 'Web portofolio akademik interaktif untuk memenuhi tugas mata kuliah Sistem Operasi. Menyajikan rincian pengerjaan algoritma lengkap dengan tabel analisis dan alur proses.',
+      tech: ['React.js', 'Tailwind CSS v3'],
+      link: 'https://sistem-pengumpulan-tugas-ridzkiahnoval.vercel.app/',
+      snippetTitle: 'os_portal_config.jsx',
+      snippetLines: [
+        '$ npm run build',
+        '> Fulfilling OS Course Assignment requirements...',
+        '> Student: Ridzki Ahnovalrian Arifin [2503010031]',
+        '> Deployment: Live on Vercel [EXIT: 0]'
+      ]
+    }
   ];
 
   const certs = [
+    {
+      title: 'Kaggle Python Certification',
+      issuer: 'Kaggle Platform',
+      date: '2026',
+      image: '/assets/certificate/python.png',
+      desc: 'Sertifikasi keahlian pemrograman Python dasar hingga lanjutan yang diperoleh melalui platform Kaggle.'
+    },
     {
       title: 'Dicoding AI Mini Camp',
       issuer: 'Dicoding Indonesia',
@@ -335,30 +337,21 @@ export default function App() {
               {projects.map((project, idx) => (
                 <div key={idx} className="bg-[#1d2025] rounded-xl overflow-hidden border border-[#32353b] shadow-lg flex flex-col group hover:border-[#465f88] transition-all">
                   
-                  {/* Simulated CLI Header Box */}
-                  <div className="w-full bg-[#0b0e13] p-4 font-mono text-xs text-[#c4c6cf] min-h-[160px] flex flex-col justify-between border-b border-[#32353b]">
-                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#272a30]">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#32353b]"></span>
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#32353b]"></span>
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#32353b]"></span>
-                      </div>
-                      <span className="text-[#8e9099] text-[10px]">{project.snippetTitle}</span>
-                    </div>
-                    <div className="space-y-1 text-[11px] text-[#a8c8ff]">
-                      {project.snippetLines.map((line, lIdx) => (
-                        <p key={lIdx} className={lIdx === 0 ? 'text-[#8e9099]' : ''}>{line}</p>
-                      ))}
+                  {/* Project Image Preview / Thumbnail */}
+                  <div className="relative w-full h-48 bg-[#0b0e13] overflow-hidden border-b border-[#32353b]">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 bg-[#101319]/80 backdrop-blur-md px-2.5 py-1 rounded border border-[#32353b] font-mono text-[10px] text-[#aec7f7]">
+                      {project.category}
                     </div>
                   </div>
 
                   {/* Body Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="font-mono text-[11px] text-[#aec7f7]">PROJECT 0{idx + 1}</span>
-                        <span className="px-2 py-0.5 rounded bg-[#1b365d]/50 text-[#aec7f7] font-mono text-[10px]">TEAM WORK</span>
-                      </div>
                       <h3 className="text-lg font-bold text-[#e1e2ea] mb-2">{project.title}</h3>
                       <p className="text-xs text-[#c4c6cf] leading-relaxed mb-6">{project.description}</p>
                     </div>
@@ -370,7 +363,7 @@ export default function App() {
                         ))}
                       </div>
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-[#aec7f7] font-mono hover:text-[#e1e2ea] transition-colors">
-                        <span>View Repository</span>
+                        <span>View Repository / Live App</span>
                         <ExternalLink size={14} />
                       </a>
                     </div>
@@ -393,24 +386,35 @@ export default function App() {
               CERTIFICATIONS & TRAINING
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {certs.map((cert, idx) => (
-                <div key={idx} className="p-6 rounded-xl bg-[#1d2025] border border-[#32353b] flex flex-col justify-between shadow-sm">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="p-2.5 rounded-lg bg-[#1b365d]/40 text-[#aec7f7]">
-                        <Award size={22} />
-                      </div>
-                      <span className="font-mono text-xs text-[#8e9099] bg-[#0b0e13] px-2.5 py-1 rounded border border-[#32353b]">
-                        {cert.date}
-                      </span>
+                <div key={idx} className="bg-[#1d2025] rounded-xl overflow-hidden border border-[#32353b] shadow-sm flex flex-col justify-between group hover:border-[#465f88] transition-all">
+                  {cert.image && (
+                    <div className="relative w-full h-40 bg-[#0b0e13] overflow-hidden border-b border-[#32353b]">
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                    <h3 className="font-bold text-base text-[#e1e2ea] mb-1">{cert.title}</h3>
-                    <p className="text-xs text-[#a8c8ff] font-mono mb-3">{cert.issuer}</p>
-                    <p className="text-xs text-[#c4c6cf] leading-relaxed">{cert.desc}</p>
-                  </div>
-                  <div className="mt-6 pt-3 border-t border-[#32353b] flex items-center gap-2 font-mono text-[11px] text-[#8e9099]">
-                    <CheckCircle2 size={14} className="text-[#aec7f7]" /> VERIFIED CREDENTIAL
+                  )}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-2.5 rounded-lg bg-[#1b365d]/40 text-[#aec7f7]">
+                          <Award size={22} />
+                        </div>
+                        <span className="font-mono text-xs text-[#8e9099] bg-[#0b0e13] px-2.5 py-1 rounded border border-[#32353b]">
+                          {cert.date}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-base text-[#e1e2ea] mb-1">{cert.title}</h3>
+                      <p className="text-xs text-[#a8c8ff] font-mono mb-3">{cert.issuer}</p>
+                      <p className="text-xs text-[#c4c6cf] leading-relaxed">{cert.desc}</p>
+                    </div>
+                    <div className="mt-6 pt-3 border-t border-[#32353b] flex items-center gap-2 font-mono text-[11px] text-[#8e9099]">
+                      <CheckCircle2 size={14} className="text-[#aec7f7]" /> VERIFIED CREDENTIAL
+                    </div>
                   </div>
                 </div>
               ))}
