@@ -42,12 +42,7 @@ export default function Navbar() {
 
         {/* Right Actions & Hamburger Button */}
         <div className="flex items-center gap-3">
-          <a 
-            href="#contact" 
-            className="hidden sm:inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium text-[#e1e2ea] bg-[#0b0e13] hover:bg-[#1b365d] hover:text-[#87a0cd] transition-all rounded-lg border border-[#32353b]"
-          >
-            <span className="mr-2">⚡</span> Let's Talk
-          </a>
+          
 
           {/* Profile Photo */}
           <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#aec7f7]/40 bg-[#0b0e13] shadow-md flex items-center justify-center">
