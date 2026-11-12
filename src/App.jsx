@@ -3,11 +3,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { 
   Terminal, Code, Cpu, Database, Network, ExternalLink, 
-  FolderGit2, Award, CheckCircle2, Copy, Check, Send, School, Mail 
+  FolderGit2, Award, CheckCircle2, Send, School, Mail 
 } from 'lucide-react';
 
 export default function App() {
-  const [copied, setCopied] = useState(false);
   const email = 'ridzkiahnovalriana@gmail.com';
 
   const educations = [
@@ -23,27 +22,15 @@ export default function App() {
       image: '/assets/project/gamantha.png',
       description: 'Aplikasi web sistem manajemen dan pemesanan kuliner lokal UMKM yang dikembangkan secara kolaboratif dengan tim menggunakan React dan Tailwind CSS.',
       tech: ['React.js', 'Tailwind CSS', 'Team Work'],
-      link: 'https://warung-gamantha.vercel.app/',
-      snippetTitle: 'warung_gamantha_app.jsx',
-      snippetLines: [
-        '$ npm run dev --host',
-        '> [Warung Gamantha UMKM] Module compiled [OK]',
-        '> Team Collaboration State: Active Sync'
-      ]
+      link: 'https://warung-gamantha.vercel.app/'
     },
     {
       title: 'Smart Parking System',
       category: 'TEAM PROJECT // UAS SYSTEM',
       image: '/assets/project/SystemSmartParking.png',
-      description: 'Sistem manajemen parkir cerdas berbasis web untuk proyek UAS, dikerjakan secara tim bersama rekan kolaborator.',
+      description: 'Sistem manajemen parkir cerdas berbasis web untuk proyek UAS, dikerjakan secara tim bersama rekan kolaborator (Rayival Dede Saputra).',
       tech: ['JavaScript', 'HTML5/CSS3', 'Team Work'],
-      link: 'https://github.com/ryvlds/TUBES-UAS-KELOMPOK_1',
-      snippetTitle: 'parking_matrix_core.js',
-      snippetLines: [
-        '$ node server.js',
-        '> Collaborator: rayival.vercel.app [UAS Project]',
-        '> Slot Allocation & Automated Billing: Online'
-      ]
+      link: 'https://rayival.vercel.app'
     },
     {
       title: 'Portal Sistem Pengumpulan Tugas // Sistem Operasi',
@@ -51,14 +38,7 @@ export default function App() {
       image: '/assets/project/sistempengumpulantugas.png',
       description: 'Web portofolio akademik interaktif untuk memenuhi tugas mata kuliah Sistem Operasi. Menyajikan rincian pengerjaan algoritma lengkap dengan tabel analisis dan alur proses.',
       tech: ['React.js', 'Tailwind CSS v3'],
-      link: 'https://sistem-pengumpulan-tugas-ridzkiahnoval.vercel.app/',
-      snippetTitle: 'os_portal_config.jsx',
-      snippetLines: [
-        '$ npm run build',
-        '> Fulfilling OS Course Assignment requirements...',
-        '> Student: Ridzki Ahnovalrian Arifin [2503010031]',
-        '> Deployment: Live on Vercel [EXIT: 0]'
-      ]
+      link: 'https://sistem-pengumpulan-tugas-ridzkiahnoval.vercel.app/'
     }
   ];
 
@@ -74,12 +54,14 @@ export default function App() {
       title: 'Dicoding AI Mini Camp',
       issuer: 'Dicoding Indonesia',
       date: '2026',
+      image: null,
       desc: 'Pelatihan intensif interaktif seputar konsep Generative AI, prompt engineering, dan pemanfaatan teknologi AI modern.'
     },
     {
       title: 'Computer Networking & Lab Practice',
       issuer: 'Informatics Program',
       date: '2026',
+      image: null,
       desc: 'Praktikum jaringan komputer, topologi routing mikrotik, dan konfigurasi lingkungan virtual.'
     }
   ];
@@ -88,13 +70,13 @@ export default function App() {
     <div className="bg-[#101319] text-[#e1e2ea] font-sans antialiased selection:bg-[#1b365d] selection:text-[#aec7f7] min-h-screen">
       <Navbar />
 
-      <main className="w-full pt-16">
+      <main className="w-full pt-16 lg:pt-20">
         
         {/* HERO SECTION */}
-        <section className="relative w-full overflow-hidden bg-[#101319] py-16 lg:py-24 border-b border-[#32353b]">
+        <section className="relative w-full overflow-hidden bg-[#101319] py-16 lg:py-28 border-b border-[#32353b]">
           <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#aec7f7 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
-          <div className="max-w-7xl mx-auto px-4 lg:px-12 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               
               {/* Left Column */}
               <div className="lg:col-span-7 flex flex-col items-start z-10">
@@ -103,19 +85,19 @@ export default function App() {
                   <span className="text-[11px] font-semibold uppercase tracking-wider font-mono">Informatics Engineering Student</span>
                 </div>
 
-                <h1 className="text-4xl sm:text-6xl text-[#e1e2ea] font-extrabold tracking-tight mb-2 font-sans">
+                <h1 className="text-4xl sm:text-6xl text-[#e1e2ea] font-extrabold tracking-tight mb-2">
                   HELLO, I'M RIDZKI<span className="text-[#aec7f7]">.</span>
                 </h1>
-                <h2 className="text-2xl sm:text-3xl text-[#a8c8ff] font-bold tracking-tight mb-6 font-sans">
+                <h2 className="text-2xl sm:text-3xl text-[#a8c8ff] font-bold tracking-tight mb-6">
                   INFORMATICS ENGINEERING STUDENT
                 </h2>
 
-                <p className="text-base sm:text-lg text-[#c4c6cf] max-w-2xl mb-8 leading-relaxed">
+                <p className="text-base sm:text-lg text-[#c4c6cf] max-w-2xl mb-8 leading-relaxed font-light">
                   Mahasiswa Teknik Informatika yang memiliki ketertarikan pada dunia pemrograman dan pengembangan perangkat lunak. Memiliki pemahaman dan pengalaman dalam menggunakan HTML, CSS, JavaScript, dan C++. Saat ini, saya sedang mengembangkan kemampuan di bidang Frontend Development dengan mempelajari React.js dan Tailwind CSS melalui pembelajaran mandiri dan proyek akademik.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-                  <a href="#projects" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#1b365d] text-[#aec7f7] hover:bg-[#aec7f7] hover:text-[#101319] transition-all duration-200 font-semibold text-sm shadow-md group">
+                  <a href="#projects" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#1b365d] text-[#aec7f7] hover:bg-[#aec7f7] hover:text-[#101319] transition-all duration-200 font-semibold text-sm shadow-md">
                     <Terminal size={18} />
                     <span>Explore My Projects</span>
                   </a>
@@ -135,7 +117,6 @@ export default function App() {
               <div className="lg:col-span-5 relative flex items-center justify-center">
                 <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-2xl bg-gradient-to-b from-[#1d2025] to-[#14171e] border-2 border-[#465f88]/40 overflow-hidden shadow-2xl flex flex-col justify-between p-5 group hover:border-[#aec7f7] transition-all duration-300">
                   
-                  {/* Card Header Bar */}
                   <div className="flex items-center justify-between font-mono text-xs text-[#8e9099] pb-3 border-b border-[#32353b]">
                     <span className="tracking-widest text-[#aec7f7] font-bold">STUDENT PROFILE // 01</span>
                     <span className="flex items-center gap-1.5 bg-[#1b365d]/40 px-2 py-0.5 rounded text-[10px] text-[#aec7f7]">
@@ -143,7 +124,6 @@ export default function App() {
                     </span>
                   </div>
 
-                  {/* Centered Profile Image Frame */}
                   <div className="relative my-auto flex flex-col items-center justify-center text-center py-2">
                     <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-xl overflow-hidden border-2 border-[#aec7f7]/30 shadow-lg bg-[#0b0e13] group-hover:scale-105 transition-transform duration-300">
                       <img 
@@ -151,7 +131,6 @@ export default function App() {
                         alt="Ridzki Ahnovalrian Arifin" 
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#101319]/60 via-transparent to-transparent pointer-events-none"></div>
                     </div>
                     
                     <div className="font-bold text-lg text-[#e1e2ea] mt-4 tracking-tight">Ridzki Ahnovalrian Arifin</div>
@@ -160,7 +139,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Card Footer Telemetry */}
                   <div className="pt-3 font-mono text-[11px] text-[#8e9099] flex items-center justify-between border-t border-[#32353b]">
                     <span className="text-[#aec7f7]">ID: 2503010031</span>
                     <span>WEST JAVA, ID</span>
@@ -174,7 +152,7 @@ export default function App() {
 
         {/* ABOUT ME SECTION */}
         <section className="w-full bg-[#0b0e13] py-20 border-b border-[#32353b]" id="about">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>01 //</span>
               <span className="tracking-widest uppercase">Overview</span>
@@ -185,10 +163,10 @@ export default function App() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-7 flex flex-col gap-6">
-                <p className="text-base sm:text-lg text-[#e1e2ea] leading-relaxed">
+                <p className="text-base sm:text-lg text-[#e1e2ea] leading-relaxed font-light">
                   Halo! Saya Ridzki Ahnovalrian Arifin, mahasiswa Program Studi Teknik Informatika di Universitas Perjuangan. Saya memiliki ketertarikan pada bidang teknologi informasi, khususnya pemrograman dan pengembangan perangkat lunak. Selama perkuliahan, saya telah mempelajari dan menggunakan HTML, CSS, JavaScript, serta C++ dalam berbagai latihan dan proyek akademik.
                 </p>
-                <p className="text-sm sm:text-base text-[#c4c6cf] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#c4c6cf] leading-relaxed font-light">
                   Sebagai mahasiswa, saya terus berusaha mengembangkan pengetahuan dan keterampilan di bidang teknologi melalui proses pembelajaran, praktik, dan pengerjaan proyek. Saat ini, saya sedang mendalami React dan Tailwind CSS untuk memperluas kemampuan di bidang Frontend Development serta mempersiapkan diri menghadapi dunia kerja di bidang teknologi.
                 </p>
 
@@ -204,7 +182,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Dossier Card */}
               <div className="lg:col-span-5 bg-[#1d2025] rounded-xl p-6 border border-[#32353b] shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1b365d] via-[#aec7f7] to-[#a8c8ff]"></div>
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#32353b]">
@@ -232,7 +209,7 @@ export default function App() {
 
         {/* EDUCATIONAL BACKGROUND SECTION */}
         <section className="w-full bg-[#101319] py-20 border-b border-[#32353b]" id="education">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>02 //</span>
               <span className="tracking-widest uppercase">Milestones</span>
@@ -266,7 +243,7 @@ export default function App() {
 
         {/* TECH STACK & CAPABILITIES */}
         <section className="w-full bg-[#0b0e13] py-20 border-b border-[#32353b]" id="tech-stack">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>03 //</span>
               <span className="tracking-widest uppercase">Capabilities</span>
@@ -320,7 +297,7 @@ export default function App() {
 
         {/* FEATURED PROJECTS SECTION */}
         <section className="w-full bg-[#101319] py-20 border-b border-[#32353b]" id="projects">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>04 //</span>
               <span className="tracking-widest uppercase">Team Work & Portfolio</span>
@@ -337,7 +314,6 @@ export default function App() {
               {projects.map((project, idx) => (
                 <div key={idx} className="bg-[#1d2025] rounded-xl overflow-hidden border border-[#32353b] shadow-lg flex flex-col group hover:border-[#465f88] transition-all">
                   
-                  {/* Project Image Preview / Thumbnail */}
                   <div className="relative w-full h-48 bg-[#0b0e13] overflow-hidden border-b border-[#32353b]">
                     <img 
                       src={project.image} 
@@ -349,7 +325,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Body Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-lg font-bold text-[#e1e2ea] mb-2">{project.title}</h3>
@@ -377,7 +352,7 @@ export default function App() {
 
         {/* CERTIFICATIONS & TRAINING */}
         <section className="w-full bg-[#0b0e13] py-20 border-b border-[#32353b]" id="learning">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>05 //</span>
               <span className="tracking-widest uppercase">Growth Trajectory</span>
@@ -424,7 +399,7 @@ export default function App() {
 
         {/* CONTACT & COLLABORATION */}
         <section className="w-full bg-[#101319] py-20" id="contact">
-          <div className="max-w-7xl mx-auto px-4 lg:px-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#aec7f7]">
               <span>06 //</span>
               <span className="tracking-widest uppercase">Communication</span>
@@ -432,7 +407,6 @@ export default function App() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               
-              {/* Left Info */}
               <div className="lg:col-span-5 flex flex-col justify-between">
                 <div>
                   <h2 className="text-3xl text-[#e1e2ea] font-extrabold tracking-tight mb-4">
@@ -478,7 +452,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right Form */}
               <div className="lg:col-span-7 bg-[#1d2025] rounded-xl p-8 border border-[#32353b] shadow-2xl relative">
                 <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#32353b]">
                   <div className="flex items-center gap-2 font-mono text-xs text-[#aec7f7]">
