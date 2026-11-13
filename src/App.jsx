@@ -17,6 +17,14 @@ export default function App() {
 
   const projects = [
     {
+      title: 'Re-design Bank Mandiri',
+      category: 'UTS PROJECT // WEB COMPANY PROFILE',
+      image: '/assets/project/re-design.png',
+      description: 'Aplikasi web sistem manajemen dan pemesanan kuliner lokal UMKM yang dikembangkan secara kolaboratif dengan tim menggunakan React dan Tailwind CSS.',
+      tech: ['React.js', 'Tailwind CSS', 'Team Work'],
+      link: 'https://warung-gamantha.vercel.app/'
+    },
+    {
       title: 'Warung Gamantha',
       category: 'TEAM PROJECT // UMKM WEB APP',
       image: '/assets/project/gamantha.png',
